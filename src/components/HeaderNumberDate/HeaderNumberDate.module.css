@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.number__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number {
+  display: inline-block;
+  width: min-content;
+  margin-right: 100px;
+}
+
+.output__field1 {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.input2 {
+  align-self: flex-end;
+}

@@ -1,21 +1,16 @@
-import './App.css';
+import style from './App.module.css';
+import { Container } from './components/Container/Container';
+import { HeaderNumberDate }
+  from './components/HeaderNumberDate/HeaderNumberDate';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      <main className={style.main}>
+        <Container>
+          <HeaderNumberDate />
+        </Container>
+      </main>
     </div>
   );
 }
