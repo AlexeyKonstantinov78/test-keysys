@@ -5,3 +5,9 @@
 .main {
   padding: 30px 0;
 }
+
+.grid{
+  border: 2px solid #8080803d;
+  height: 70vh;
+  overflow: auto;
+}

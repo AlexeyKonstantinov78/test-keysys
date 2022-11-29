@@ -1,6 +1,6 @@
 .flex {
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 .number__text2 {
 
@@ -9,4 +9,8 @@
 
 .span {
   color: red;
+}
+
+input:hover {
+  background-color: #ffe7c7;
 }

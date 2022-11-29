@@ -7,7 +7,7 @@ export const InputDate = ({ text, data }) => (
     <p className={style.number__text2}>{text}
       <span className={style.span}>*</span>
     </p>
-    <input type="date" id="data" name="data" defaultValue={data} />
+    <input type="date" name="data" defaultValue={data} />
   </div>
 );
 
