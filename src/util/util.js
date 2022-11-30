@@ -10,3 +10,5 @@ export async function get(url) {
     return error;
   }
 }
+
+export const numRandom = () => Math.floor((Math.random() * (10 - 1)) + 1);

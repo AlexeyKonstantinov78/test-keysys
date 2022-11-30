@@ -10,5 +10,7 @@ Container.propTypes = {
     PropTypes.string,
     PropTypes.object,
     PropTypes.array,
+    PropTypes.symbol,
+    PropTypes.bool,
   ]),
 };
