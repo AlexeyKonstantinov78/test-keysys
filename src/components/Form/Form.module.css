@@ -1,0 +1,70 @@
+.form {
+  padding: 5px 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;  
+}
+
+.number__date{
+  display: flex;
+  justify-content:space-between;  
+}
+
+.label {
+  display: inline-block;
+  margin-right: 5px;
+  min-width: 150px;
+}
+
+.input {
+  border: 1px solid #8080803d;
+  background-color: #80808012;
+  width: 100%;
+}
+
+.input__date {
+  background-color: transparent;
+}
+
+.input_account1 {
+  width: 350px;
+  background-image: url('./img/sel.png');
+  background-repeat: no-repeat;
+  background-position: 218px;
+  background-size: 9px;
+}
+
+.flex {
+  display: flex;
+  gap: 5px;
+  height: 27px;
+  align-items: center;
+}
+
+.min_content {
+  width: min-content;
+  min-width: unset;  
+}
+
+.label_date_exec{
+  min-width:102px;
+}
+
+.input_color_tomato {
+  border-color: tomato;
+
+}
+
+span {
+  color: tomato;
+}
+
+.input_bg_yellow {
+  background-color: yellow;
+}
+
+#number {
+  margin-right: 5px;
+}

@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import style from './App.module.css';
 import { Container } from './components/Container/Container';
-import { Correspondent } from './components/Correspondent/Correspondent';
+import { Form } from './components/Form/Form';
+// import { Correspondent } from './components/Correspondent/Correspondent';
 import { GridHeader } from './components/Grid/GridHeader';
 import { GridList } from './components/Gridlist/GridList';
-import { HeaderNumberDate }
-  from './components/HeaderNumberDate/HeaderNumberDate';
-import { SendersAccount } from './components/SendersAccount/SendersAccount';
+// import { HeaderNumberDate }
+//   from './components/HeaderNumberDate/HeaderNumberDate';
+// import { SendersAccount } from './components/SendersAccount/SendersAccount';
 
 const listAccount = [
   {
@@ -63,10 +64,11 @@ function App() {
     <div className={style.app}>
       <main className={style.main}>
         <Container>
-          <HeaderNumberDate />
+          <Form />
+          {/* <HeaderNumberDate />
           <SendersAccount />
           <Correspondent title={'Корреспондент: '} />
-          <Correspondent title={'Наимен. дохода: '} />
+          <Correspondent title={'Наимен. дохода: '} /> */}
           <div className={style.grid}>
             <GridHeader />
             <GridList />
