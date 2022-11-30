@@ -4,19 +4,24 @@ import { Container } from './components/Container/Container';
 import { Form } from './components/Form/Form';
 import { GridHeader } from './components/Grid/GridHeader';
 import { GridList } from './components/Gridlist/GridList';
+import { get } from './util/util';
+import axios from 'axios';
 
 const listAccount = [
   {
-    numberccor: '2221335409090932',
+    id: 1,
+    numberccor: 2221335409090932,
     name: 'MasterCard',
   },
   {
-    numberccor: '4710216477552728',
+    id: 2,
+    numberccor: 4710216477552728,
     name: 'Visa',
   },
   {
-    numberccor: 'Discover Card',
-    name: '6011383809641644',
+    id: 3,
+    numberccor: 6011383809641644,
+    name: 'Discover Card',
   },
 ];
 
@@ -60,7 +65,7 @@ function App() {
     <div className={style.app}>
       <main className={style.main}>
         <Container>
-          <Form />
+          <Form listAccount={listAccount} />
           <div className={style.grid}>
             <GridHeader />
             <GridList />
