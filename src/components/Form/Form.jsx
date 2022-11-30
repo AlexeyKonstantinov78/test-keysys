@@ -1,12 +1,17 @@
+/* eslint-disable no-unused-vars */
 import _ from './Form.module.css';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 export const Form = ({ listAccount }) => {
   const [select, setSelect] = useState('');
+  const [invalid, setInvalid] = useState(true);
 
   const onClickSelect = ({ target }) => {
-    console.log(target);
+    if (target.value !== '') setInvalid(false);
+    else {
+      setInvalid(true);
+    }
     setSelect(target.value);
   };
 
@@ -59,7 +64,10 @@ export const Form = ({ listAccount }) => {
           <label className={_.label} htmlFor='account1'>
             Счет отправителя: <span className={_.span}>*</span>{' '}
           </label>
-          <select className={_.select} onChange={onClickSelect}>
+          <select
+            className={_.select}
+            onChange={onClickSelect}
+            aria-invalid={invalid}>
             <option defaultValue=''></option>
             {listAccount.map((item) => (
               <option key={item.id} defaultValue={item.numberccor}>

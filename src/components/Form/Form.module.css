@@ -68,3 +68,8 @@ span {
 #number {
   margin-right: 5px;
 }
+
+select[aria-invalid=true] {
+  border: 1px solid tomato;
+  background-color: yellow;
+}
