@@ -27,48 +27,50 @@ const listAccount = [
 
 const arr = [
   {
-    number: '', // номер
-    date: '2021-10-01', // дата
-    date_exec: '2021-10-01', // дата проводки
-    caccount1: '', // Счет отправителя
-    corr1_n: '', // наименование отправителя
-    corr2_n: '', //
-    inc_n: '', //
+    number: 321231, // номер
+    date: '2021-10-08', // дата
+    date_exec: '2021-10-08', // дата проводки
+    caccount1: '32132132321322', // Счет отправителя
+    corr1_n: 'ОАО МетизЛенГлавПром', // наименование отправителя
+    corr2_n: 'ООО Компания Мяс', //
+    inc_n: 23320, //
     items: [
       {
         id: '1', //
-        summ: '', //
-        rcaccount: '', //
-        dt: '', //
-        kt: '', //
+        summ: '32132132', //
+        rcaccount: '341614029088230', //
+        dt: 531513, //
+        kt: 56435313, //
       },
       {
         id: '2', //
-        summ: '', //
-        rcaccount: '', //
-        dt: '', //
-        kt: '', //
+        summ: '2132131', //
+        rcaccount: '2720666848650993', //
+        dt: 15435, //
+        kt: 5641543, //
       },
       {
         id: '3', //
-        summ: '', //
-        rcaccount: '', //
-        dt: '', //
-        kt: '', //
+        summ: '3132', //
+        rcaccount: '2563256019744047', //
+        dt: 5155, //
+        kt: 541531, //
       },
     ], // список
   },
 ];
-
+console.log(arr[0].items);
 function App() {
   return (
     <div className={style.app}>
       <main className={style.main}>
         <Container>
-          <Form listAccount={listAccount} />
+          <Form listAccount={listAccount} arr={arr[0]} />
           <div className={style.grid}>
             <GridHeader />
-            <GridList />
+            {arr[0].items.map((item) => (
+              <GridList key={item.id} arr={item} />
+            ))}
           </div>
         </Container>
       </main>

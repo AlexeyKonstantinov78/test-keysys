@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import _ from './Form.module.css';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export const Form = ({ listAccount }) => {
+export const Form = ({ listAccount, arr }) => {
   const [select, setSelect] = useState('');
   const [invalid, setInvalid] = useState(true);
 
@@ -15,7 +14,6 @@ export const Form = ({ listAccount }) => {
     setSelect(target.value);
   };
 
-  console.log();
   return (
     <form className={_.form}>
       <div className={_.wrap}>
@@ -29,6 +27,7 @@ export const Form = ({ listAccount }) => {
               type='text'
               name='number'
               id={_.number}
+              defaultValue={arr.number}
             />
 
             <label className={_.label + ' ' + _.min_content} htmlFor='date'>
@@ -39,7 +38,7 @@ export const Form = ({ listAccount }) => {
               type='date'
               name='date'
               id='date'
-              defaultValue='2022-08-22'
+              defaultValue={arr.date}
             />
           </div>
           <div className={_.flex}>
@@ -55,7 +54,7 @@ export const Form = ({ listAccount }) => {
               type='date'
               name='date_exec'
               id='date_exec'
-              defaultValue='2022-08-22'
+              defaultValue={arr.date_exec}
             />
           </div>
         </div>
@@ -65,6 +64,7 @@ export const Form = ({ listAccount }) => {
             Счет отправителя: <span className={_.span}>*</span>{' '}
           </label>
           <select
+            name='select'
             className={_.select}
             onChange={onClickSelect}
             aria-invalid={invalid}>
@@ -87,13 +87,25 @@ export const Form = ({ listAccount }) => {
           <label className={_.label} htmlFor='corr2_n'>
             Корреспондент:{' '}
           </label>
-          <input className={_.input} type='text' name='corr2_n' id='corr2_n' />
+          <input
+            className={_.input}
+            type='text'
+            name='corr2_n'
+            id='corr2_n'
+            defaultValue={arr.corr1_n}
+          />
         </div>
         <div className={_.account + ' ' + _.flex}>
           <label className={_.label} htmlFor='inc_n'>
             Наим.дохода:{' '}
           </label>
-          <input className={_.input} type='text' name='inc_n' id='inc_n' />
+          <input
+            className={_.input}
+            type='text'
+            name='inc_n'
+            id='inc_n'
+            defaultValue={arr.inc_n}
+          />
         </div>
       </div>
     </form>
@@ -102,4 +114,5 @@ export const Form = ({ listAccount }) => {
 
 Form.propTypes = {
   listAccount: PropTypes.array,
+  arr: PropTypes.object,
 };
