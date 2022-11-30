@@ -11,4 +11,5 @@ export async function get(url) {
   }
 }
 
-export const numRandom = () => Math.floor((Math.random() * (10 - 1)) + 1);
+export const numRandom = (max = 10) =>
+  Math.floor(Math.random() * (max - 1)) + 1;

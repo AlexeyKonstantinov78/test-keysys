@@ -26,16 +26,16 @@ const listAccount = [
 
 function App() {
   const [arr, setArr] = useState([]);
+  const [index, setIndex] = useState(1);
 
   useEffect(() => {
     get('https://637f91dd2f8f56e28e90521b.mockapi.io/test')
       .then((res) => {
+        setIndex(numRandom(res.length));
         setArr(res);
       });
   }, []);
 
-  const index = numRandom();
-  // console.log(arr[index].items);
   return (
     <div className={style.app}>
       <main className={style.main}>
